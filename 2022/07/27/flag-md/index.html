@@ -1,20 +1,20 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/my_favicon/favicon-16x16.png?v=2.7.0" type="image/png" sizes="16x16"><link rel="icon" href="/my_favicon/favicon-32x32.png?v=2.7.0" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png?v=2.7.0" sizes="180x180"><link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=2.7.0" color="#54bcff"><meta name="msapplication-TileImage" content="/my_favicon/mstile-150x150.png"><meta name="msapplication-TileColor" content="#000000"><meta name="description" content="三道web题                           弱类型md5题目       [BJDCTF2020]Easy MD5    一个特殊的字符ffifdyop：md5加密后的结果再经过ASCII转换后，前几位的结果是 &#39;or&#39;6 ，这刚好是一个mysql查询万能密码， 源代码的mysql查询语句就有可能 从 select *">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/my_favicon/favicon-16x16.png?v=2.7.0" type="image/png" sizes="16x16"><link rel="icon" href="/my_favicon/favicon-32x32.png?v=2.7.0" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png?v=2.7.0" sizes="180x180"><link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=2.7.0" color="#54bcff"><meta name="msapplication-TileImage" content="/my_favicon/mstile-150x150.png"><meta name="msapplication-TileColor" content="#000000"><meta name="description" content="三道web题                           弱类型md5题目       [BJDCTF2020]Easy MD5 抓包后看到如下关键代码：    一个特殊的字符ffifdyop：md5加密后的结果再经过ASCII转换后，前几位的结果是 &#39;or&#39;6 ，这刚好是一个mysql查询万能密码， 源代码的mysql查询语句就有可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三道web题">
 <meta property="og:url" content="https://leve1zz.github.io/2022/07/27/flag-md/index.html">
 <meta property="og:site_name" content="leve1&#39;s blog">
-<meta property="og:description" content="三道web题                           弱类型md5题目       [BJDCTF2020]Easy MD5    一个特殊的字符ffifdyop：md5加密后的结果再经过ASCII转换后，前几位的结果是 &#39;or&#39;6 ，这刚好是一个mysql查询万能密码， 源代码的mysql查询语句就有可能 从 select *">
+<meta property="og:description" content="三道web题                           弱类型md5题目       [BJDCTF2020]Easy MD5 抓包后看到如下关键代码：    一个特殊的字符ffifdyop：md5加密后的结果再经过ASCII转换后，前几位的结果是 &#39;or&#39;6 ，这刚好是一个mysql查询万能密码， 源代码的mysql查询语句就有可">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="f:/my_note/static/images/image-20220726203931883.png">
-<meta property="og:image" content="f:/my_note/static/images/image-20220726204006390.png">
-<meta property="og:image" content="f:/my_note/static/images/image-20220726205420110.png">
+<meta property="og:image" content="https://leve1zz.github.io/2022/07/27/images/image-20220726203931883.png">
+<meta property="og:image" content="https://leve1zz.github.io/2022/07/27/images/image-20220726204006390.png">
+<meta property="og:image" content="https://leve1zz.github.io/2022/07/27/images/image-20220726205420110.png">
 <meta property="article:published_time" content="2022-07-27T07:10:20.000Z">
-<meta property="article:modified_time" content="2022-07-27T07:22:10.675Z">
+<meta property="article:modified_time" content="2022-07-29T03:47:11.438Z">
 <meta property="article:author" content="leve1">
 <meta property="article:tag" content="web">
 <meta property="article:tag" content="ctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="f:/my_note/static/images/image-20220726203931883.png"><title>三道web题 | leve1's blog</title><link ref="canonical" href="https://leve1zz.github.io/2022/07/27/flag-md/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.7.0"><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="https://leve1zz.github.io/2022/07/27/images/image-20220726203931883.png"><title>三道web题 | leve1's blog</title><link ref="canonical" href="https://leve1zz.github.io/2022/07/27/flag-md/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.7.0"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -38,22 +38,23 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">三道web题</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-07-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数</span><span class="post-meta-item__value">888</span></span></div></header><div class="post-body">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">三道web题</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-07-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数</span><span class="post-meta-item__value">899</span></span></div></header><div class="post-body">
         <h1 id="三道web题"   >
           <a href="#三道web题" class="heading-link"><i class="fas fa-link"></i></a><a href="#三道web题" class="headerlink" title="三道web题"></a>三道web题</h1>
       
         <h2 id="弱类型md5题目"   >
           <a href="#弱类型md5题目" class="heading-link"><i class="fas fa-link"></i></a><a href="#弱类型md5题目" class="headerlink" title="弱类型md5题目"></a>弱类型md5题目</h2>
       <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://buuoj.cn/challenges#[BJDCTF2020]Easy%20MD5" >[BJDCTF2020]Easy MD5</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>抓包后看到如下关键代码：</p>
 <blockquote>
-<p><img src="F:/my_note/static/images/image-20220726203931883.png" alt="image-20220726203931883"></p>
+<p><img src="../images/image-20220726203931883.png" alt="image-20220713170111886"></p>
 </blockquote>
 <p>一个特殊的字符<a target="_blank" rel="noopener" href="http://t.zoukankan.com/tqing-p-11852990.html"><strong>ffifdyop</strong></a>：md5加密后的结果再经过ASCII转换后，前几位的结果是 <code>&#39;or&#39;6</code> ，这刚好是一个mysql查询万能密码，</p>
 <p>源代码的mysql查询语句就有可能</p>
 <p>从 <code>select * from &#39;admin&#39; where password=md5($pass,true)</code></p>
 <p>变成 <code>select * from &#39;admin&#39; where password=&#39;&#39;or&#39;6xxxxx&#39; </code> 从而完成查询</p>
 <blockquote>
-<img src="F:/my_note/static/images/image-20220726204006390.png" alt="image-20220726204006390" style="zoom:150%;" />
+<img src="../images/image-20220726204006390.png" alt="image-20220726204006390" style="zoom:150%;" />
 </blockquote>
 <p>简单的弱类型相等，只要做到a和b的值不一样，但md5值都是0e开头即可</p>
 <p><code>?a=s155964671&amp;b=240610708</code></p>
@@ -82,7 +83,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></he
 </tr>
 </tbody></table></div>
 <blockquote>
-<p><img src="F:/my_note/static/images/image-20220726205420110.png" alt="image-20220726205420110"></p>
+<p><img src="../images/image-20220726205420110.png" alt="image-20220726205420110"></p>
 </blockquote>
 <p>md5的数组绕过，在php中数组的md5值为NULL，即<code>md5(array($a))==NULL</code>，所以只需要传递param1和param2两个数组类型的不同的值就可以了</p>
 <p>hackbar中post传入 <code>param1[]=1&amp;param2[]=2</code></p>
